@@ -1,0 +1,8 @@
+.venv/
+.env
+credentials
+logs
+__pycache__/
+*.py[cod]
+*.pdf
+*.csv
