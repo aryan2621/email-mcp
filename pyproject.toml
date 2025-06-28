@@ -3,7 +3,7 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [project]
-name = "email-mcp"
+name = "gmail-mcp"
 version = "0.0.1"
 requires-python = ">=3.10"
 dependencies = [
@@ -15,6 +15,11 @@ dependencies = [
     "reportlab",
     "PyPDF2",
     "weasyprint",
+    "pypdf>=5.6.1",
+    "matplotlib>=3.10.3",
+    "pytesseract>=0.3.13",
+    "cryptography>=45.0.4",
+    "qrcode>=8.2",
 ]
 
 [tool.hatch.build.targets.wheel]

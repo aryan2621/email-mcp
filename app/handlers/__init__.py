@@ -11,4 +11,4 @@ from .email import (
 )
 from .calendar import calendar
 from .sheets import sheets
-from .pdf import pdf
+from .document import pdf

@@ -3,6 +3,7 @@
 credentials
 logs
 __pycache__/
-*.py[cod]
-*.pdf
+generated_docs
 *.csv
+*.txt
+.DS_Store

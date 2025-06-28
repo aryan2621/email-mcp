@@ -1,6 +1,6 @@
-# email-mcp
+# gmail-mcp
 
-`email-mcp` is a powerful and extensible backend service designed to integrate and automate workflows across email, calendar, and spreadsheet services. It provides a solid foundation for building custom productivity and management tools.
+`gmail-mcp` is a powerful and extensible backend service designed to integrate and automate workflows across email, calendar, and spreadsheet services. It provides a solid foundation for building custom productivity and management tools.
 
 ## Features
 
@@ -33,11 +33,11 @@ This project is an ideal backend for a **Team Performance Tracker**. It can be e
 
 The project is organized into the following main directories:
 
--  `email-mcp/app/handlers/`: Contains the core logic for interacting with external services (email, calendar, sheets).
--  `email-mcp/app/utils/`: Provides utility functions for common tasks like logging and email processing.
--  `email-mcp/app/state.py`: Manages the application's state.
--  `email-mcp/main.py`: The main entry point for the application.
--  `email-mcp/pyproject.toml`: Defines project dependencies and metadata.
+-  `gmail-mcp/app/handlers/`: Contains the core logic for interacting with external services (email, calendar, sheets).
+-  `gmail-mcp/app/utils/`: Provides utility functions for common tasks like logging and email processing.
+-  `gmail-mcp/app/state.py`: Manages the application's state.
+-  `gmail-mcp/main.py`: The main entry point for the application.
+-  `gmail-mcp/pyproject.toml`: Defines project dependencies and metadata.
 
 ## Getting Started
 
@@ -52,7 +52,7 @@ The project is organized into the following main directories:
 
    ```sh
    git clone <repository-url>
-   cd email-mcp
+   cd gmail-mcp
    ```
 
 2. **Create and activate a virtual environment:**
@@ -72,7 +72,7 @@ The project is organized into the following main directories:
 
 Before running the application, you may need to configure credentials for the services you want to use (e.g., Google Workspace, Microsoft 365).
 
-1. Navigate to `email-mcp/app/handlers/config.py`.
+1. Navigate to `gmail-mcp/app/handlers/config.py`.
 2. Follow the instructions in the file to add your API keys, client secrets, and other necessary configuration details.
 
 ## Usage
@@ -80,7 +80,7 @@ Before running the application, you may need to configure credentials for the se
 To run the application, execute the main script:
 
 ```sh
-python email-mcp/main.py
+python gmail-mcp/main.py
 ```
 
 Make sure your environment is properly configured and dependencies are installed.
