@@ -27,58 +27,6 @@ This project provides a set of handlers to interact with various services:
 -  **Authentication:**
    -  Handles authentication with service providers.
 
-## PDF/Document Generation & Manipulation
-
-The document handler provides a robust API for creating and manipulating PDFs with a wide range of features:
-
--  **Cover Page:**
-   -  Add a premium cover with logo, title, subtitle, author, date, company, and contact info.
--  **Headers & Footers:**
-   -  Customizable text, alignment, and optional page numbers.
--  **Watermarks:**
-   -  Text or image watermarks with configurable opacity, rotation, color, and size.
--  **Backgrounds:**
-   -  Solid color or gradient backgrounds (vertical/horizontal).
--  **Decorative Borders:**
-   -  Single, double, or decorative borders with custom color, width, and margin.
--  **Tables:**
-   -  Flexible tables with custom styles, column widths, and optional titles.
--  **Images:**
-   -  Local or remote images with size, alignment, and captions.
--  **Charts:**
-   -  Bar, pie, line, histogram, scatter, and horizontal bar charts with full data/config support.
--  **Lists:**
-   -  Bullet or numbered lists with optional titles.
--  **Formatted Text:**
-   -  Rich text with bold, italic, underline, color, and hyperlinks.
--  **Multi-Column Layouts:**
-   -  Newsletter-style multi-column sections with adjustable spacing.
--  **Text Boxes & Callouts:**
-   -  Highlighted text boxes and callout boxes for info, warnings, success, or errors.
--  **QR Codes:**
-   -  Embed QR codes with custom data, size, and captions.
--  **Digital Signatures:**
-   -  Add signature blocks with name, date, position, and font size.
--  **Footnotes & Endnotes:**
-   -  Add references and notes at the bottom or end of the document.
--  **Forms:**
-   -  Add interactive form fields (text, date, checkbox, signature).
--  **Appendix:**
-   -  Add appendix sections with titles and content.
--  **Page Breaks & Sectioning:**
-   -  Fine-grained control over page breaks and document sections.
--  **PDF Manipulation:**
-   -  Merge multiple PDFs, split PDFs into parts, and extract PDF metadata (page count, size, encryption, etc.).
-
-### PDF Manipulation Utilities
-
--  **Merge PDFs:**
-   -  Combine multiple PDF files into one.
--  **Split PDFs:**
-   -  Split a PDF into multiple files by page count.
--  **Extract PDF Info:**
-   -  Get metadata, page count, size, and encryption status.
-
 ## Potential Use Case: Team Performance Tracker
 
 This project is an ideal backend for a **Team Performance Tracker**. It can be extended to:
@@ -93,7 +41,6 @@ This project is an ideal backend for a **Team Performance Tracker**. It can be e
 The project is organized into the following main directories:
 
 -  `gmail-mcp/app/handlers/`: Contains the core logic for interacting with external services (email, calendar, sheets, documents).
--  `gmail-mcp/app/handlers/document/`: PDF/document generation and manipulation logic.
 -  `gmail-mcp/app/utils/`: Provides utility functions for common tasks like logging and email processing.
 -  `gmail-mcp/app/state.py`: Manages the application's state.
 -  `gmail-mcp/main.py`: The main entry point for the application.
@@ -104,7 +51,7 @@ The project is organized into the following main directories:
 ### Prerequisites
 
 -  Python 3.9+
--  A package manager like `pip`
+-  A package manager like `pip` or `uv`
 
 ### Installation
 
@@ -128,19 +75,24 @@ The project is organized into the following main directories:
    pip install .
    ```
 
-### Configuration
-
-Before running the application, you may need to configure credentials for the services you want to use (e.g., Google Workspace, Microsoft 365).
-
-1. Navigate to `gmail-mcp/app/handlers/config.py`.
-2. Follow the instructions in the file to add your API keys, client secrets, and other necessary configuration details.
-
 ## Usage
 
-To run the application, execute the main script:
+To run the application, install the `claude desktop` and configure the following config in `claude_desktop_config.json`:
 
-```sh
-python gmail-mcp/main.py
+```
+"email-mcp": {
+         "command": "uv",
+         "args": [
+            "--directory",
+            "/Users/<MAC_USER_NAME>/Desktop/mcp/email-mcp",
+            "run",
+            "main.py"
+         ],
+         "env": {
+            "GOOGLE_CLIENT_ID": <GOOGLE_CLIENT_ID>
+            "GOOGLE_CLIENT_SECRET": <GOOGLE_CLIENT_SECRET>
+         }
+      }
 ```
 
 Make sure your environment is properly configured and dependencies are installed.
