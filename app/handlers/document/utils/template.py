@@ -209,7 +209,7 @@ class ComprehensiveDocTemplate(SimpleDocTemplate):
             page_width, page_height = canvas_obj._pagesize
             
             # Get border configuration
-            margin_inches = self.border_config.get('margin_inches', 0.2)
+            margin_inches = self.border_config.get('margin_inches', 0.5)
             margin = margin_inches * 72  # Convert to points
             color = colors.toColor(self.border_config.get('color', '#333333'))
             width = self.border_config.get('width', 1.5)

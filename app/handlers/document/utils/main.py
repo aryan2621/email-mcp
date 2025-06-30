@@ -84,7 +84,7 @@ def create_enhanced_pdf_with_all_components(
         # Create document with proper margins
         margin_adjustment = 0
         if border_config:
-            border_margin = border_config.get('margin_inches',0.2) * 72
+            border_margin = border_config.get('margin_inches',0.5) * 72
             margin_adjustment = border_margin + 5  # Less extra padding
         
 
